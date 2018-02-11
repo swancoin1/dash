@@ -1,5 +1,5 @@
 ---
-name: "mewcoin-win-0.12"
+name: "mewcoin-win-0.1.0.1"
 enable_cache: true
 suites:
 - "trusty"
