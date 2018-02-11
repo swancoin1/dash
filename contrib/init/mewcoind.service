@@ -1,0 +1,22 @@
+[Unit]
+Description=Mewcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=mewcoincore
+Group=mewcoincore
+
+Type=forking
+PIDFile=/var/lib/mewcoind/mewcoind.pid
+ExecStart=/usr/bin/mewcoind -daemon -pid=/var/lib/mewcoind/mewcoind.pid \
+-conf=/etc/mewcoincore/mewcoin.conf -datadir=/var/lib/mewcoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

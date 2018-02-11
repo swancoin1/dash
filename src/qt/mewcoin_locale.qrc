@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/mewcoin_bg.qm</file>
+        <file alias="de">locale/mewcoin_de.qm</file>
+        <file alias="en">locale/mewcoin_en.qm</file>
+        <file alias="es">locale/mewcoin_es.qm</file>
+        <file alias="fi">locale/mewcoin_fi.qm</file>
+        <file alias="fr">locale/mewcoin_fr.qm</file>
+        <file alias="it">locale/mewcoin_it.qm</file>
+        <file alias="ja">locale/mewcoin_ja.qm</file>
+        <file alias="pl">locale/mewcoin_pl.qm</file>
+        <file alias="pt">locale/mewcoin_pt.qm</file>
+        <file alias="ru">locale/mewcoin_ru.qm</file>
+        <file alias="sk">locale/mewcoin_sk.qm</file>
+        <file alias="sv">locale/mewcoin_sv.qm</file>
+        <file alias="vi">locale/mewcoin_vi.qm</file>
+        <file alias="zh_CN">locale/mewcoin_zh_CN.qm</file>
+        <file alias="zh_TW">locale/mewcoin_zh_TW.qm</file>
+    </qresource>
+</RCC>

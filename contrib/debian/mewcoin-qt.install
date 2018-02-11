@@ -1,0 +1,6 @@
+usr/local/bin/mewcoin-qt usr/bin
+share/pixmaps/mewcoin32.xpm usr/share/pixmaps
+share/pixmaps/mewcoin16.xpm usr/share/pixmaps
+share/pixmaps/mewcoin128.png usr/share/pixmaps
+debian/mewcoin-qt.desktop usr/share/applications
+debian/mewcoin-qt.protocol usr/share/kde4/services/

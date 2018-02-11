@@ -1,0 +1,11 @@
+[Protocol]
+exec=mewcoin-qt '%u'
+protocol=mewcoin
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

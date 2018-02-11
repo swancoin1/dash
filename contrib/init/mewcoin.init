@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  mewcoind The Mewcoin Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: mewcoind
+# processname: mewcoind
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/mewcoind, see below
+if [ -f /etc/sysconfig/mewcoind ]; then
+        . /etc/sysconfig/mewcoind
+fi
+
+RETVAL=0
+
+prog=mewcoind
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/mewcoind
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/mewcoind}
+
+# mewcoind defaults to /usr/bin/mewcoind, override with BITCOIND_BIN
+mewcoind=${BITCOIND_BIN-/usr/bin/mewcoind}
+
+# mewcoind opts default to -disablewallet, override with BITCOIND_OPTS
+mewcoind_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $mewcoind $mewcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

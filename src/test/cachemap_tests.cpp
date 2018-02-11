@@ -1,8 +1,8 @@
-// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2014-2017 The Mewcoin Core developers
 
 #include "cachemap.h"
 
-#include "test/test_dash.h"
+#include "test/test_mewcoin.h"
 
 #include <boost/test/unit_test.hpp>
 

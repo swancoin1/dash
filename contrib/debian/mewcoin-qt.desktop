@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Mewcoin
+Comment=Mewcoin P2P Cryptocurrency
+Comment[fr]=Mewcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Mewcoin, eşten eşe kriptografik sanal para birimi
+Exec=mewcoin-qt %u
+Terminal=false
+Type=Application
+Icon=mewcoin128
+MimeType=x-scheme-handler/mewcoin;
+Categories=Office;Finance;
