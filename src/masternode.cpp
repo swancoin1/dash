@@ -373,7 +373,7 @@ bool CMasternodeBroadcast::Create(std::string strService, std::string strKeyMast
     CService service;
     if (!Lookup(strService.c_str(), service, 0, false))
         return Log(strprintf("Invalid address %s for masternode.", strService));
-    int mainnetDefaultPort = Params(CBaseChainParams::MAIN).GetDefaultPort();
+    //int mainnetDefaultPort = Params(CBaseChainParams::MAIN).GetDefaultPort();
 	int mainnetDefaultPort = 9887; // hardcode
 	
     if (Params().NetworkIDString() == CBaseChainParams::MAIN) {
@@ -472,7 +472,7 @@ bool CMasternodeBroadcast::SimpleCheck(int& nDos)
         return false;
     }
 
-    int mainnetDefaultPort = Params(CBaseChainParams::MAIN).GetDefaultPort();
+    //int mainnetDefaultPort = Params(CBaseChainParams::MAIN).GetDefaultPort();
 	int mainnetDefaultPort = 9887;
 	
     if(Params().NetworkIDString() == CBaseChainParams::MAIN) {
