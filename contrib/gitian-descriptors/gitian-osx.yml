@@ -1,5 +1,5 @@
 ---
-name: "mewcoin-osx-0.1.0.1"
+name: "mewcoin-osx-0.15"
 enable_cache: true
 suites:
 - "trusty"
